@@ -1,14 +1,19 @@
+<div class="container">
 <div class="login">
   <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
-    <div>
-      <label for="username">Usuário:</label>
+    <div class="flex-info">
+      <label class="label-p" for="username">Usuário:</label>
+
       <input type="text" id="username" required [(ngModel)]="loginData.username" name="username" #username="ngModel">
     </div>
-    <div>
+    <div class="flex-info">
       <label for="password">Senha:</label>
+
       <input type="password" id="password" required [(ngModel)]="loginData.password" name="password" #password="ngModel">
     </div>
     <button type="submit" [disabled]="!loginForm.valid">Login</button>
+    <button (click)="navigateToRegistrar()">Registrar</button>
   </form>
 
   </div>
+</div>
