@@ -1,0 +1,24 @@
+<div class="container">
+<div class="login">
+  <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <div class="flex-info">
+      <label for="username">Usuário:</label>
+      <input type="text" id="username" required [(ngModel)]="registrarData.username" name="username" #username="ngModel">
+    </div>
+
+    <div class="flex-info">
+      <label for="email">Email:</label>
+      <input type="email" id="email" required [(ngModel)]="registrarData.email" name="email" #email="ngModel">
+    </div>
+
+    <div class="flex-info">
+      <label for="password">Senha:</label>
+      <input type="password" id="password" required [(ngModel)]="registrarData.password" name="password" #password="ngModel">
+    </div>
+
+    <button type="submit" [disabled]="!loginForm.valid">Registrar</button>
+    <button (click)="navigateToLogin()">Login</button>
+
+  </form>
+</div>
+</div>
