@@ -11,8 +11,8 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
   loginData = {
-    username: 'user1',
-    password: 'senha1'
+    username: '',
+    password: ''
   };
 
   constructor(private http: HttpClient, private router: Router) {}
